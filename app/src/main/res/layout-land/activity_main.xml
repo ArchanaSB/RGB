@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mainsc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        tools:context="com.example.welcome.rgb.MainActivity"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="101dp">
+
+
+        <RelativeLayout
+            android:id="@+id/mainsp"
+            android:layout_width="700dp"
+            android:layout_height="495dp"
+            android:background="#000"
+            android:configChanges="screenLayout|screenSize"
+            android:verticalScrollbarPosition="defaultPosition"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="27dp">
+
+
+            <Button
+                android:id="@+id/redchange"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18dp"
+                android:onClick="mod"
+                android:text="RED" />
+
+            <Button
+                android:id="@+id/greenchange"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/redchange"
+                android:layout_below="@+id/redchange"
+                android:layout_marginTop="27dp"
+                android:onClick="mod"
+                android:text="GREEN" />
+
+            <Button
+                android:id="@+id/bluechange"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/greenchange"
+                android:layout_below="@+id/greenchange"
+                android:layout_marginTop="25dp"
+                android:onClick="mod"
+                android:text="BLUE" />
+
+            <TextView
+                android:id="@+id/redvalue"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/redchange"
+                android:layout_alignBottom="@+id/redchange"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="300dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                tools:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/greenvalue"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/greenchange"
+                android:layout_alignBottom="@+id/greenchange"
+                android:layout_alignStart="@+id/redvalue"
+                android:layout_marginEnd="300dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                tools:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/bluevalue"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bluechange"
+                android:layout_alignBottom="@+id/bluechange"
+                android:layout_alignStart="@+id/greenvalue"
+                android:layout_marginEnd="300dp"
+                android:background="@android:drawable/alert_light_frame"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                tools:textSize="24sp" />
+
+            <Button
+                android:id="@+id/resetbuttonbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/bluechange"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@+id/redchange"
+                android:onClick="reset"
+                android:text="RESET" />
+
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
